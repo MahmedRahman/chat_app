@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class ChatRoomController extends GetxController {
-  //TODO: Implement ChatRoomController
+class SplashController extends GetxController {
+  //TODO: Implement SplashController
 
   final count = 0.obs;
   @override

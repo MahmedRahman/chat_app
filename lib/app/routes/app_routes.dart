@@ -8,6 +8,7 @@ abstract class Routes {
   static const SIGUP = _Paths.SIGUP;
   static const CHAT = _Paths.CHAT;
   static const CHAT_ROOM = _Paths.CHAT_ROOM;
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const SIGUP = '/sigup';
   static const CHAT = '/chat';
   static const CHAT_ROOM = '/chat-room';
+  static const SPLASH = '/splash';
 }

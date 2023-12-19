@@ -1,12 +1,11 @@
+import 'package:chat_app/app/service/auth.dart';
 import 'package:chat_app/app/routes/app_pages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/sigup_controller.dart';
-
-class SigupView extends GetView<SigupController> {
+class SigupView extends GetView {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
@@ -38,15 +37,11 @@ class SigupView extends GetView<SigupController> {
             ),
             ElevatedButton(
               onPressed: () {
-                FirebaseAuth.instance
-                    .createUserWithEmailAndPassword(
+                Get.find<AuthService>().createUserWithEmailAndPassword(
                   email: email.text,
                   password: password.text,
-                )
-                    .then((value) {
-                  print('sign up success');
-                  Get.to(Routes.HOME);
-                });
+                  context: Get.context!,
+                );
               },
               child: Text("Sign UP"),
             )
